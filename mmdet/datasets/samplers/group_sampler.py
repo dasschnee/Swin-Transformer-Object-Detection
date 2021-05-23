@@ -11,6 +11,7 @@ class GroupSampler(Sampler):
 
     def __init__(self, dataset, samples_per_gpu=1):
         assert hasattr(dataset, 'flag')
+        print('Dataset', dataset)
         self.dataset = dataset
         self.samples_per_gpu = samples_per_gpu
         self.flag = dataset.flag.astype(np.int64)
@@ -33,8 +34,6 @@ class GroupSampler(Sampler):
             indice = np.concatenate(
                 [indice, np.random.choice(indice, num_extra)])
             indices.append(indice)
-        print('Dataset',self.dataset)
-        print('GroupSizes', self.group_sizes)
         indices = np.concatenate(indices)
         indices = [
             indices[i * self.samples_per_gpu:(i + 1) * self.samples_per_gpu]
