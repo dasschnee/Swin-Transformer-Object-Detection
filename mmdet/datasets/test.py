@@ -39,7 +39,7 @@ class TestDataset(CustomDataset):
                         bboxes=np.array(bboxes).astype(np.float32),
                         labels=np.array(labels).astype(np.int64))
                 ))
-
+        print(*data_infos, sep = ", ")
         return data_infos
 
     def get_ann_info(self, idx):
