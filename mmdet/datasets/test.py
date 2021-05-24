@@ -10,7 +10,6 @@ from .coco import CocoDataset
 class TestDataset(CocoDataset):
 
     CLASSES = ('leg',)
-    
     # def load_annotations(self, ann_file):
     #     ann_list = mmcv.list_from_file(ann_file)
     #     # print('ann_list', ann_list)
