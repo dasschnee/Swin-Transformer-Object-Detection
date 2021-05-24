@@ -22,6 +22,8 @@ class GroupSampler(Sampler):
 
     def __iter__(self):
         indices = []
+        print('Flag',self.flag)
+        print('Group_Size', self.group_sizes)
         for i, size in enumerate(self.group_sizes):
             if size == 0:
                 continue
