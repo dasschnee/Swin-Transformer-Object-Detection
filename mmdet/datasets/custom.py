@@ -99,7 +99,7 @@ class CustomDataset(Dataset):
                 self.proposals = [self.proposals[i] for i in valid_inds]
             # set group flag for the sampler
             self._set_group_flag()
-        print('self.flag',self.flag)
+            print('self.flag',self.flag)
         # processing pipeline
         self.pipeline = Compose(pipeline)
 
