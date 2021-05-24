@@ -182,4 +182,5 @@ def train_detector(model,
         runner.resume(cfg.resume_from)
     elif cfg.load_from:
         runner.load_checkpoint(cfg.load_from)
+    print('Dataloaders', *data_loaders)
     runner.run(data_loaders, cfg.workflow)
