@@ -85,7 +85,7 @@ class CustomDataset(Dataset):
                                               self.proposal_file)
         # load annotations (and proposals)
         self.data_infos = self.load_annotations(self.ann_file)
-
+        
         if self.proposal_file is not None:
             self.proposals = self.load_proposals(self.proposal_file)
         else:
