@@ -1,1 +1,236 @@
-{"info":{"year":2021,"version":"1.0","description":"VIA project exported to COCO format using VGG Image Annotator (http://www.robots.ox.ac.uk/~vgg/software/via/)","contributor":"","url":"http://www.robots.ox.ac.uk/~vgg/software/via/","date_created":"Fri May 21 2021 11:43:48 GMT+0200 (Mitteleuropäische Sommerzeit)"},"images":[{"id":1,"width":280,"height":441,"file_name":"IC_5.png","license":0,"date_captured":""}],"annotations":[{"segmentation":[[24,9,69,9,69,90,24,90]],"area":3645,"bbox":[24,9,45,81],"iscrowd":0,"id":1,"image_id":1,"category_id":1},{"segmentation":[[83,8,131,8,131,87,83,87]],"area":3792,"bbox":[83,8,48,79],"iscrowd":0,"id":2,"image_id":1,"category_id":1},{"segmentation":[[141,7,181,7,181,90,141,90]],"area":3320,"bbox":[141,7,40,83],"iscrowd":0,"id":3,"image_id":1,"category_id":1},{"segmentation":[[197,6,244,6,244,89,197,89]],"area":3901,"bbox":[197,6,47,83],"iscrowd":0,"id":4,"image_id":1,"category_id":1},{"segmentation":[[194,329,245,329,245,427,194,427]],"area":4998,"bbox":[194,329,51,98],"iscrowd":0,"id":5,"image_id":1,"category_id":1},{"segmentation":[[140,332,183,332,183,430,140,430]],"area":4214,"bbox":[140,332,43,98],"iscrowd":0,"id":6,"image_id":1,"category_id":1},{"segmentation":[[82,331,129,331,129,425,82,425]],"area":4418,"bbox":[82,331,47,94],"iscrowd":0,"id":7,"image_id":1,"category_id":1},{"segmentation":[[23,327,70,327,70,426,23,426]],"area":4653,"bbox":[23,327,47,99],"iscrowd":0,"id":8,"image_id":1,"category_id":1}],"licenses":[{"id":0,"name":"Unknown License","url":""}],"categories":[{"supercategory":"class","id":1,"name":""}]}
+{
+    "info": {
+        "year": 2021,
+        "version": "1.0",
+        "description": "VIA project exported to COCO format using VGG Image Annotator (http://www.robots.ox.ac.uk/~vgg/software/via/)",
+        "contributor": "",
+        "url": "http://www.robots.ox.ac.uk/~vgg/software/via/",
+        "date_created": "Mon May 24 2021 15:02:07 GMT+0200 (Mitteleuropäische Sommerzeit)"
+    },
+    "images": [
+        {
+            "id": 1,
+            "width": 280,
+            "height": 441,
+            "file_name": "IC_5.png",
+            "license": 0,
+            "date_captured": ""
+        }
+    ],
+    "annotations": [
+        {
+            "segmentation": [
+                [
+                    24,
+                    9,
+                    69,
+                    9,
+                    69,
+                    90,
+                    24,
+                    90
+                ]
+            ],
+            "area": 3645,
+            "bbox": [
+                24,
+                9,
+                45,
+                81
+            ],
+            "iscrowd": 0,
+            "id": 1,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    83,
+                    8,
+                    131,
+                    8,
+                    131,
+                    87,
+                    83,
+                    87
+                ]
+            ],
+            "area": 3792,
+            "bbox": [
+                83,
+                8,
+                48,
+                79
+            ],
+            "iscrowd": 0,
+            "id": 2,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    141,
+                    7,
+                    181,
+                    7,
+                    181,
+                    90,
+                    141,
+                    90
+                ]
+            ],
+            "area": 3320,
+            "bbox": [
+                141,
+                7,
+                40,
+                83
+            ],
+            "iscrowd": 0,
+            "id": 3,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    197,
+                    6,
+                    244,
+                    6,
+                    244,
+                    89,
+                    197,
+                    89
+                ]
+            ],
+            "area": 3901,
+            "bbox": [
+                197,
+                6,
+                47,
+                83
+            ],
+            "iscrowd": 0,
+            "id": 4,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    194,
+                    329,
+                    245,
+                    329,
+                    245,
+                    427,
+                    194,
+                    427
+                ]
+            ],
+            "area": 4998,
+            "bbox": [
+                194,
+                329,
+                51,
+                98
+            ],
+            "iscrowd": 0,
+            "id": 5,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    140,
+                    332,
+                    183,
+                    332,
+                    183,
+                    430,
+                    140,
+                    430
+                ]
+            ],
+            "area": 4214,
+            "bbox": [
+                140,
+                332,
+                43,
+                98
+            ],
+            "iscrowd": 0,
+            "id": 6,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    82,
+                    331,
+                    129,
+                    331,
+                    129,
+                    425,
+                    82,
+                    425
+                ]
+            ],
+            "area": 4418,
+            "bbox": [
+                82,
+                331,
+                47,
+                94
+            ],
+            "iscrowd": 0,
+            "id": 7,
+            "image_id": 1,
+            "category_id": 1
+        },
+        {
+            "segmentation": [
+                [
+                    23,
+                    327,
+                    70,
+                    327,
+                    70,
+                    426,
+                    23,
+                    426
+                ]
+            ],
+            "area": 4653,
+            "bbox": [
+                23,
+                327,
+                47,
+                99
+            ],
+            "iscrowd": 0,
+            "id": 8,
+            "image_id": 1,
+            "category_id": 1
+        }
+    ],
+    "licenses": [
+        {
+            "id": 0,
+            "name": "Unknown License",
+            "url": ""
+        }
+    ],
+    "categories": [
+        {
+            "supercategory": "class",
+            "id": 1,
+            "name": "leg"
+        }
+    ]
+}
