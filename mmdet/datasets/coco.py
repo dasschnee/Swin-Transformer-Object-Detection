@@ -55,7 +55,6 @@ class CocoDataset(CustomDataset):
         self.cat_ids = self.coco.get_cat_ids(cat_names=self.CLASSES)
         self.cat2label = {cat_id: i for i, cat_id in enumerate(self.cat_ids)}
         self.img_ids = self.coco.get_img_ids()
-        print('ids', self.img_ids)
         data_infos = []
         total_ann_ids = []
         for i in self.img_ids:
