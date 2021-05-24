@@ -97,8 +97,8 @@ class EpochBasedRunnerAmp(EpochBasedRunner):
                     'Optimizer should be dict or torch.optim.Optimizer '
                     f'but got {type(self.optimizer)}')
 
-        if 'amp' in checkpoint:
-            apex.amp.load_state_dict(checkpoint['amp'])
-            self.logger.info('load amp state dict')
+        # if 'amp' in checkpoint:
+        #     apex.amp.load_state_dict(checkpoint['amp'])
+        #     self.logger.info('load amp state dict')
 
         self.logger.info('resumed epoch %d, iter %d', self.epoch, self.iter)
