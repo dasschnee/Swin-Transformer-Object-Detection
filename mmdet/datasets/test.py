@@ -12,7 +12,7 @@ class TestDataset(CustomDataset):
     
     def load_annotations(self, ann_file):
         ann_list = mmcv.list_from_file(ann_file)
-        print('ann_list', ann_list)
+        # print('ann_list', ann_list)
         data_infos = []
         for i, ann_line in enumerate(ann_list):
             if ann_line != '#':
@@ -29,7 +29,7 @@ class TestDataset(CustomDataset):
             for anns in ann_list[i + 4:i + 4 + bbox_number]:
                 bboxes.append([float(ann) for ann in anns[:4]])
                 labels.append(int(anns[4]))
-
+            print('bbox', *bboxes)
             data_infos.append(
                 dict(
                     filename=ann_list[i + 1],
@@ -39,7 +39,7 @@ class TestDataset(CustomDataset):
                         bboxes=np.array(bboxes).astype(np.float32),
                         labels=np.array(labels).astype(np.int64))
                 ))
-        print(*data_infos, sep = ", ")
+        print('data_infos', *data_infos, sep = ", ")
         return data_infos
 
     def get_ann_info(self, idx):
