@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument(
         '--resume-from', help='the checkpoint file to resume from')
     parser.add_argument(
-        '--load-from', help='the checkpoint file to load from')
+        '--load_from', help='the checkpoint file to load from')
     parser.add_argument(
         '--no-validate',
         action='store_true',
