@@ -13,8 +13,6 @@ class GroupSampler(Sampler):
         assert hasattr(dataset, 'flag')
         self.dataset = dataset
         self.samples_per_gpu = samples_per_gpu
-        print('Dataset', dataset)
-        print('Dataset_flag', dataset.flag)
         self.flag = dataset.flag.astype(np.int64)
         self.group_sizes = np.bincount(self.flag)
         self.num_samples = 0
@@ -24,8 +22,6 @@ class GroupSampler(Sampler):
 
     def __iter__(self):
         indices = []
-        print('Flag',self.flag)
-        print('Group_Size', self.group_sizes)
         for i, size in enumerate(self.group_sizes):
             if size == 0:
                 continue

@@ -99,7 +99,6 @@ class CustomDataset(Dataset):
                 self.proposals = [self.proposals[i] for i in valid_inds]
             # set group flag for the sampler
             self._set_group_flag()
-            print('self.flag',self.flag)
         # processing pipeline
         self.pipeline = Compose(pipeline)
 
@@ -165,11 +164,9 @@ class CustomDataset(Dataset):
         Images with aspect ratio greater than 1 will be set as group 1,
         otherwise group 0.
         """
-        print('len of self', len(self))
         self.flag = np.zeros(len(self), dtype=np.uint8)
         for i in range(len(self)):
             img_info = self.data_infos[i]
-            print('img_info', img_info)
             if img_info['width'] / img_info['height'] > 1:
                 self.flag[i] = 1
 
