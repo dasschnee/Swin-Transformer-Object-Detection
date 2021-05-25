@@ -36,18 +36,19 @@ data = dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/train_data.json',
         img_prefix=data_root + 'train/',
-        pipeline=train_pipeline,
-        classes=['leg']),
+        pipeline=train_pipeline),
+        # classes=['leg']),
     val=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/val_data.json',
         img_prefix=data_root + 'val/',
-        pipeline=test_pipeline,
-        classes=['leg']),
+        pipeline=test_pipeline),
+        # classes=['leg']),
     test=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/test_data.json',
         img_prefix=data_root + 'test/',
         pipeline=test_pipeline),
-        classes=['leg'])
+        # classes=['leg'])
+        )
 evaluation = dict(interval=1, metric='bbox')
