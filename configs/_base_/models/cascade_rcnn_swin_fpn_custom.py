@@ -2,8 +2,8 @@
 num_classes = 1
 model = dict(
     type='CascadeRCNN',
-    pretrained = '/content/drive/MyDrive/BA/Swin-Transformer-Object-Detection/work_dirs/cascade_rcnn_swin_tiny_patch4_window7_mstrain_480-800_giou_4conv1f_adamw_3x_coco/latest.pth',
-    # pretrained=None,
+    # pretrained = '/content/drive/MyDrive/BA/Swin-Transformer-Object-Detection/work_dirs/cascade_rcnn_swin_tiny_patch4_window7_mstrain_480-800_giou_4conv1f_adamw_3x_coco/latest.pth',
+    pretrained=None,
     backbone=dict(
     type='SwinTransformer',
     embed_dim=96,
