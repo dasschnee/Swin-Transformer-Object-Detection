@@ -14,7 +14,6 @@ model = dict(
         drop_path_rate=0.0,
         patch_norm=True,
         use_checkpoint=False
-        # use_checkpoint='../work_dirs/cascade_mask_rcnn_swin_tiny_patch4_window7_mstrain_480-800_giou_4conv1f_adamw_1x_coco/epoch_11.pth'
     ),
     neck=dict(in_channels=[96, 192, 384, 768]),
     roi_head=dict(
