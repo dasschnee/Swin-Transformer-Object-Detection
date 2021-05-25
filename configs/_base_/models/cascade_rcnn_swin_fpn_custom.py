@@ -19,7 +19,8 @@ model = dict(
     ape=False,
     patch_norm=True,
     out_indices=(0, 1, 2, 3),
-    use_checkpoint=False),
+    use_checkpoint='/content/drive/MyDrive/BA/Swin-Transformer-Object-Detection/checkpoints/swin_tiny_patch4_window7_224.pth'
+    ),
     neck=dict(
         type='FPN',
         in_channels=[96, 192, 384, 768],

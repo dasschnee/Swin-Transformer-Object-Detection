@@ -103,6 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+checkpoints
+checkpoints/
 data/
 data
 .vscode
