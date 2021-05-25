@@ -54,8 +54,8 @@ def save_checkpoint(model, filename, optimizer=None, meta=None):
         for name, optim in optimizer.items():
             checkpoint['optimizer'][name] = optim.state_dict()
 
-    # # save amp state dict in the checkpoint
-    # checkpoint['amp'] = apex.amp.state_dict()
+    # save amp state dict in the checkpoint
+    checkpoint['amp'] = apex.amp.state_dict()
 
     if filename.startswith('pavi://'):
         try:
