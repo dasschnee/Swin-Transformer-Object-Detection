@@ -2,7 +2,6 @@
 num_classes = 1
 model = dict(
     type='CascadeRCNN',
-    # pretrained = '/content/drive/MyDrive/BA/Swin-Transformer-Object-Detection/work_dirs/cascade_rcnn_swin_tiny_patch4_window7_mstrain_480-800_giou_4conv1f_adamw_3x_coco/latest.pth',
     pretrained=None,
     backbone=dict(
     type='SwinTransformer',
@@ -19,7 +18,7 @@ model = dict(
     ape=False,
     patch_norm=True,
     out_indices=(0, 1, 2, 3),
-    use_checkpoint='/content/drive/MyDrive/BA/Swin-Transformer-Object-Detection/checkpoints/swin_tiny_patch4_window7_224.pth'
+    use_checkpoint=None
     ),
     neck=dict(
         type='FPN',
