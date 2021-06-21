@@ -10,6 +10,8 @@ from torch.utils.data import DataLoader
 
 from mmdet.utils import get_root_logger
 
+import optuna ### CUSTOM CODE
+
 
 class EvalHook(Hook):
     """Evaluation hook.
@@ -48,6 +50,7 @@ class EvalHook(Hook):
 
     def __init__(self,
                  dataloader,
+                 trial, ### CUSTOM CODE
                  start=None,
                  interval=1,
                  by_epoch=True,
@@ -72,7 +75,7 @@ class EvalHook(Hook):
         self.save_best = save_best
         self.eval_kwargs = eval_kwargs
         self.initial_epoch_flag = True
-
+        self.trial = trial ### CUSTOM CODE
         self.logger = get_root_logger()
 
         if self.save_best is not None:
@@ -178,6 +181,16 @@ class EvalHook(Hook):
         for name, val in eval_res.items():
             runner.log_buffer.output[name] = val
         runner.log_buffer.ready = True
+        #### CUSTOM CODE BEGIN
+        if trial is not None:
+            trial.report(eval_res['mAP'], runner.epoch)
+
+            # Handle pruning based on the intermediate value.
+            if trial.should_prune():
+                raise optuna.exceptions.TrialPruned()
+
+        ### CUSTOM CODE END
+        
         if self.save_best is not None:
             if self.key_indicator == 'auto':
                 # infer from eval_results

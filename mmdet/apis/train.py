@@ -42,6 +42,7 @@ def set_random_seed(seed, deterministic=False):
 def train_detector(model,
                    dataset,
                    cfg,
+                   trial,
                    distributed=False,
                    validate=False,
                    timestamp=None,
@@ -162,7 +163,8 @@ def train_detector(model,
         eval_cfg = cfg.get('evaluation', {})
         eval_cfg['by_epoch'] = cfg.runner['type'] != 'IterBasedRunner'
         eval_hook = DistEvalHook if distributed else EvalHook
-        runner.register_hook(eval_hook(val_dataloader, **eval_cfg))
+        runner.register_hook(eval_hook(val_dataloader, trial, **eval_cfg)) ### CUSTUM CODE
+        # runner.register_hook(eval_hook(val_dataloader, **eval_cfg)) ### ORIGINAL
 
     # user-defined hooks
     if cfg.get('custom_hooks', None):
