@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/models/cascade_rcnn_swin_fpn_custom.py',
-    '../_base_/datasets/test_config.py', #change to instance for default
+    '../_base_/datasets/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 num_classes = 1
